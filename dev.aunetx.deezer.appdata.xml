@@ -30,7 +30,22 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
-    <release version="5.30.570-6" date="2022-06-22" />
+    <release version="5.30.580-3" date="2023-07-08">
+      <description>
+        <p>
+          Updated to version 5.30.580 and added arm64 support.
+        </p>
+      </description>
+
+    </release>
+    <release version="5.30.570-6" date="2023-06-22">
+      <description>
+        <p>
+          Updated to version 5.30.570 and published to Flathub.
+        </p>
+      </description>
+
+    </release>
   </releases>
   <content_rating type="oars-1.1" />
   <update_contact>me@aunetx.dev</update_contact>
