@@ -30,13 +30,19 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="5.30.590-1" date="2023-08-03">
+      <description>
+        <p>
+          Updated to version 5.30.590.
+        </p>
+      </description>
+    </release>
     <release version="5.30.580-3" date="2023-07-08">
       <description>
         <p>
           Updated to version 5.30.580 and added arm64 support.
         </p>
       </description>
-
     </release>
     <release version="5.30.570-6" date="2023-06-22">
       <description>
@@ -44,7 +50,6 @@
           Updated to version 5.30.570 and published to Flathub.
         </p>
       </description>
-
     </release>
   </releases>
   <content_rating type="oars-1.1" />
