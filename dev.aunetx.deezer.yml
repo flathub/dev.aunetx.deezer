@@ -1,9 +1,9 @@
 app-id: dev.aunetx.deezer
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
+base-version: '23.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node18
 command: run.sh
@@ -22,10 +22,8 @@ finish-args:
   - --talk-name=org.gnome.SettingsDaemon
   - --talk-name=org.gnome.SessionManager
   - --own-name=org.mpris.MediaPlayer2.chromium.*
-  # Fs access: music/downloads to send mp3, pictures to change profile picture
+  # Fs access: music to send mp3
   - --filesystem=xdg-music:ro
-  - --filesystem=xdg-pictures:ro
-  - --filesystem=xdg-download:ro
 modules:
   - name: deezer
     buildsystem: simple
@@ -39,13 +37,13 @@ modules:
         commands:
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v5.30.660-1/deezer-desktop-5.30.660-x64.tar.xz
-        sha256: 67c38dcbe5c562daa6aa29aba169f3e0ef09c97b0fe643731225f905c0f36640
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.10-1/deezer-desktop-6.0.10-x64.tar.xz
+        sha256: c9d3cd1aa1405cada23c35aca5b05c1ff4e54bf745051c9d6d3e0262a0d6da15
         only-arches: ["x86_64"]
         dest: archive
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v5.30.660-1/deezer-desktop-5.30.660-arm64.tar.xz
-        sha256: 2d855d03d7ea2e24fb99037333b11f6d4381a6ec5aa5b3deb0e9a54fc97ce456
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.10-1/deezer-desktop-6.0.10-arm64.tar.xz
+        sha256: ac367baed7ca8a0ec39a96e84cb99df4fad041416b68abb38d2c6fcb8abf96e0
         only-arches: ["aarch64"]
         dest: archive
     build-commands:
