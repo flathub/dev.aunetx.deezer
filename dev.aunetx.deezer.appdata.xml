@@ -30,6 +30,13 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="6.0.10-1" date="2023-11-09">
+      <description>
+        <p>
+          Updated to version 6.0.10 and updated the icon.
+        </p>
+      </description>
+    </release>
     <release version="5.30.660-1" date="2023-09-25">
       <description>
         <p>
