@@ -19,17 +19,26 @@
   <screenshots>
     <screenshot type="default">
       <caption>Homepage dark</caption>
-      <image type="source" width="2519" height="1771">https://raw.githubusercontent.com/flathub/dev.aunetx.deezer/master/screenshots/screenshot_dark.png</image>
+      <image type="source" width="2519" height="1771">
+        https://raw.githubusercontent.com/flathub/dev.aunetx.deezer/master/screenshots/screenshot_dark.png</image>
     </screenshot>
     <screenshot>
       <caption>Homepage light</caption>
-      <image type="source" width="2519" height="1771">https://raw.githubusercontent.com/flathub/dev.aunetx.deezer/master/screenshots/screenshot_light.png</image>
+      <image type="source" width="2519" height="1771">
+        https://raw.githubusercontent.com/flathub/dev.aunetx.deezer/master/screenshots/screenshot_light.png</image>
     </screenshot>
   </screenshots>
   <kudos>
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="6.0.30-1" date="2023-12-27">
+      <description>
+        <p>
+          Updated to version 6.0.30.
+        </p>
+      </description>
+    </release>
     <release version="6.0.10-1" date="2023-11-09">
       <description>
         <p>
