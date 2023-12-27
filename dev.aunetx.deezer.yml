@@ -37,13 +37,13 @@ modules:
         commands:
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.10-1/deezer-desktop-6.0.10-x64.tar.xz
-        sha256: c9d3cd1aa1405cada23c35aca5b05c1ff4e54bf745051c9d6d3e0262a0d6da15
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.30-1/deezer-desktop-6.0.30-x64.tar.xz
+        sha256: d9fe915c5f0a4b4c5a100d20704e923f4faaf2d64787308e1fe66a6f9fa0f8d1
         only-arches: ["x86_64"]
         dest: archive
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.10-1/deezer-desktop-6.0.10-arm64.tar.xz
-        sha256: ac367baed7ca8a0ec39a96e84cb99df4fad041416b68abb38d2c6fcb8abf96e0
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.30-1/deezer-desktop-6.0.30-arm64.tar.xz
+        sha256: f5f4b7551c8474eb1a390fb355e005dda68ba0d9d56a87f15da0557ecb9d4401
         only-arches: ["aarch64"]
         dest: archive
     build-commands:
