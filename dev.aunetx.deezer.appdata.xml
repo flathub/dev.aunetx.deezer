@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>dev.aunetx.deezer</id>
-  <provides>
-    <id>dev.aunetx.deezer.desktop</id>
-  </provides>
-  <launchable type="desktop-id">dev.aunetx.deezer.desktop</launchable>
   <name>Deezer</name>
-  <developer_name>aunetx</developer_name>
   <summary>Online music streaming service</summary>
+  <developer id="tld.vendor">
+    <name>aunetx</name>
+  </developer>
+  <description>
+    <p>An unofficial linux port of the deezer desktop application.</p>
+    <p>Access all of your favorite music, and save them offline for later!</p>
+  </description>
+  <launchable type="desktop-id">dev.aunetx.deezer.desktop</launchable>
+
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://www.deezer.com/legal/cgu/</project_license>
   <url type="homepage">https://github.com/aunetx/deezer-linux</url>
   <url type="help">https://github.com/aunetx/deezer-linux/issues</url>
-  <description>
-    <p>An unofficial linux port of the deezer desktop application.
-      Access all of your favorite music, and save them offline for later!</p>
-  </description>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#cc92ff</color>
+    <color type="primary" scheme_preference="dark">#943ce1</color>
+  </branding>
+
   <screenshots>
     <screenshot type="default">
       <caption>Homepage dark</caption>
@@ -32,6 +38,13 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="6.0.110-1" date="2024-04-16">
+      <description>
+        <p>
+          Updated to version 6.0.110.
+        </p>
+      </description>
+    </release>
     <release version="6.0.60-1" date="2024-02-05">
       <description>
         <p>
