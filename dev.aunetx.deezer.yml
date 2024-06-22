@@ -41,11 +41,23 @@ modules:
         sha256: db459fcabdfd650acc977c488c4f7c4e6aaa129b508f9eefc124010c07b5913b
         only-arches: ["x86_64"]
         dest: archive
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/aunetx/deezer-linux/releases/latest
+          tag-query: ".tag_name"
+          version-query: "$tag | sub(\"^v\"; \"\") | sub(\"-[0-9]$\"; \"\")"
+          url-query: ".assets[] | select(.name==\"deezer-desktop-\" + $version + \"-x64.tar.xz\") | .browser_download_url"
       - type: archive
         url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.60-1/deezer-desktop-6.0.60-arm64.tar.xz
         sha256: 9c48aeeb40a6501870bcfe473760d67667f627442bdddb4dcc3d9598e682b240
         only-arches: ["aarch64"]
         dest: archive
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/aunetx/deezer-linux/releases/latest
+          tag-query: ".tag_name"
+          version-query: "$tag | sub(\"^v\"; \"\") | sub(\"-[0-9]$\"; \"\")"
+          url-query: ".assets[] | select(.name==\"deezer-desktop-\" + $version + \"-arm64.tar.xz\") | .browser_download_url"
     build-commands:
       - cp -a archive /app/main
 
