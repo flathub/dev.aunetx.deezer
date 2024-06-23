@@ -38,6 +38,13 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="6.0.150-1" date="2024-06-23">
+      <description>
+        <p>
+          Updated to version 6.0.150, added automatic updates for flathub, fixed tray icon crashes and improved MPRIS support.
+        </p>
+      </description>
+    </release>
     <release version="6.0.110-1" date="2024-04-16">
       <description>
         <p>
