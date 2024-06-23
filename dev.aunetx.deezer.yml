@@ -8,7 +8,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.node18
 command: run.sh
 separate-locales: false
-tags: ["proprietary"]
+tags: [proprietary]
 finish-args:
   # Basic permissions
   - --share=ipc
@@ -41,27 +41,29 @@ modules:
         commands:
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.60-1/deezer-desktop-6.0.60-x64.tar.xz
-        sha256: db459fcabdfd650acc977c488c4f7c4e6aaa129b508f9eefc124010c07b5913b
-        only-arches: ["x86_64"]
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.150-1/deezer-desktop-6.0.150-x64.tar.xz
+        sha256: d1a85f25568539c97965c23553f7ae9c1c455d2f545c6daf3f161c1f8f9d951d
+        only-arches: [x86_64]
         dest: archive
         x-checker-data:
           type: json
           url: https://api.github.com/repos/aunetx/deezer-linux/releases/latest
-          tag-query: ".tag_name"
-          version-query: "$tag | sub(\"^v\"; \"\") | sub(\"-[0-9]$\"; \"\")"
-          url-query: ".assets[] | select(.name==\"deezer-desktop-\" + $version + \"-x64.tar.xz\") | .browser_download_url"
+          tag-query: .tag_name
+          version-query: $tag | sub("^v"; "") | sub("-[0-9]$"; "")
+          url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-x64.tar.xz")
+            | .browser_download_url
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.60-1/deezer-desktop-6.0.60-arm64.tar.xz
-        sha256: 9c48aeeb40a6501870bcfe473760d67667f627442bdddb4dcc3d9598e682b240
-        only-arches: ["aarch64"]
+        url: https://github.com/aunetx/deezer-linux/releases/download/v6.0.150-1/deezer-desktop-6.0.150-arm64.tar.xz
+        sha256: 9ae36969d8e33afb5a8f681fe7b962f56d18c0a95e0ba2f94daa2e0522051027
+        only-arches: [aarch64]
         dest: archive
         x-checker-data:
           type: json
           url: https://api.github.com/repos/aunetx/deezer-linux/releases/latest
-          tag-query: ".tag_name"
-          version-query: "$tag | sub(\"^v\"; \"\") | sub(\"-[0-9]$\"; \"\")"
-          url-query: ".assets[] | select(.name==\"deezer-desktop-\" + $version + \"-arm64.tar.xz\") | .browser_download_url"
+          tag-query: .tag_name
+          version-query: $tag | sub("^v"; "") | sub("-[0-9]$"; "")
+          url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-arm64.tar.xz")
+            | .browser_download_url
     build-commands:
       - cp -a archive /app/main
 
