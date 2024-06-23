@@ -18,6 +18,10 @@ finish-args:
   # Allow other instances to see lockfiles
   - --env=TMPDIR=/var/tmp
   # DBus permissions
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=org.kde.StatusNotifierItem
+  - --talk-name=com.canonical.dbusmenu
+  - --talk-name=org.freedesktop.PowerManagement
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.gnome.SettingsDaemon
   - --talk-name=org.gnome.SessionManager
