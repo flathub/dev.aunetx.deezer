@@ -38,6 +38,9 @@
     <kudo>HiDpiIcon</kudo>
   </kudos>
   <releases>
+    <release version="6.0.150" date="2024-06-23">
+      <description></description>
+    </release>
     <release version="6.0.150-1" date="2024-06-23">
       <description>
         <p>
@@ -109,6 +112,6 @@
       </description>
     </release>
   </releases>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <update_contact>me@aunetx.dev</update_contact>
 </component>
