@@ -15,6 +15,7 @@ finish-args:
   - --socket=x11
   - --socket=pulseaudio
   - --share=network
+  - --device=dri
   # Allow other instances to see lockfiles
   - --env=TMPDIR=/var/tmp
   # DBus permissions
