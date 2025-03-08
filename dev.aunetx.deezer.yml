@@ -72,7 +72,3 @@ modules:
       - install -Dm644 dev.aunetx.deezer.appdata.xml /app/share/appdata/dev.aunetx.deezer.appdata.xml
       - install -Dm644 /app/main/resources/dev.aunetx.deezer.svg /app/share/icons/hicolor/scalable/apps/dev.aunetx.deezer.svg
       - install -Dm644 /app/main/resources/dev.aunetx.deezer.desktop /app/share/applications/dev.aunetx.deezer.desktop
-      - |
-        for size in 16 32 48 64 128 256 512 1024; do
-          install -Dm644 "/app/main/resources/icons/${size}x${size}.png" "/app/share/icons/hicolor/${size}x${size}/apps/dev.aunetx.deezer.png"
-        done
