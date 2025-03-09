@@ -1,11 +1,11 @@
 app-id: dev.aunetx.deezer
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '24.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node18
+  - org.freedesktop.Sdk.Extension.node20
 command: run.sh
 separate-locales: false
 tags: [proprietary]
@@ -15,17 +15,16 @@ finish-args:
   - --socket=x11
   - --socket=pulseaudio
   - --share=network
+  - --device=dri
   # Allow other instances to see lockfiles
   - --env=TMPDIR=/var/tmp
   # DBus permissions
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --talk-name=org.kde.StatusNotifierItem
-  - --talk-name=com.canonical.dbusmenu
   - --talk-name=org.freedesktop.PowerManagement
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.gnome.SettingsDaemon
   - --talk-name=org.gnome.SessionManager
-  - --own-name=org.mpris.MediaPlayer2.chromium.*
+  - --own-name=org.mpris.MediaPlayer2.deezer
   # Fs access: music to send mp3
   - --filesystem=xdg-music:ro
 modules:
@@ -74,3 +73,4 @@ modules:
       - install -Dm644 dev.aunetx.deezer.appdata.xml /app/share/appdata/dev.aunetx.deezer.appdata.xml
       - install -Dm644 /app/main/resources/dev.aunetx.deezer.svg /app/share/icons/hicolor/scalable/apps/dev.aunetx.deezer.svg
       - install -Dm644 /app/main/resources/dev.aunetx.deezer.desktop /app/share/applications/dev.aunetx.deezer.desktop
+      - patch-desktop-filename /app/main/resources/app.asar
