@@ -38,7 +38,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - zypak-wrapper /app/main/deezer-desktop "$@"
+          - env XDG_CURRENT_DESKTOP=Unity zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
         url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.31/deezer-desktop-7.0.31-x64.tar.xz
         sha256: fbeeec2f33ed32530c874eb103f12f42555eaca7e6fa4afe22523458a11311a3
