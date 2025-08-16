@@ -52,8 +52,8 @@ modules:
           url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-x64.tar.xz")
             | .browser_download_url
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.130/deezer-desktop-7.0.130-arm64.tar.xz
-        sha256: 14c34777aacc2882b69361ccb67552322d37e95977525bf078e0c908183d858a
+        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.140/deezer-desktop-7.0.140-arm64.tar.xz
+        sha256: a5c283ca51cc9784a03047a013b1649682915ea2d6f727fe9a10001af1673fbc
         only-arches: [aarch64]
         dest: archive
         x-checker-data:
