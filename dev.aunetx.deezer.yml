@@ -40,8 +40,8 @@ modules:
         commands:
           - env XDG_CURRENT_DESKTOP=Unity zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.180/deezer-desktop-7.0.180-x64.tar.xz
-        sha256: a38797196819d4248a8c50638ffa99c6a647f70d3556982b5615a9f67d357def
+        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.190/deezer-desktop-7.0.190-x64.tar.xz
+        sha256: cdb9283a1b9a6b217919740d8753faec9a64ca1949a896a8f9412f4cb3131754
         only-arches: [x86_64]
         dest: archive
         x-checker-data:
@@ -52,8 +52,8 @@ modules:
           url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-x64.tar.xz")
             | .browser_download_url
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.180/deezer-desktop-7.0.180-arm64.tar.xz
-        sha256: dde5671b8068448f931da8ea7e49c48a48719c1cee3f7412e818ac52c4af0247
+        url: https://github.com/aunetx/deezer-linux/releases/download/v7.0.190/deezer-desktop-7.0.190-arm64.tar.xz
+        sha256: 9a5a30d27316ea68890caf791ae19d99c7303fcde945d745f2161551ec8376ce
         only-arches: [aarch64]
         dest: archive
         x-checker-data:
