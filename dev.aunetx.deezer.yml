@@ -4,8 +4,6 @@ runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '24.08'
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node22
 command: run.sh
 separate-locales: false
 tags: [proprietary]
@@ -13,6 +11,7 @@ finish-args:
   # Basic permissions
   - --share=ipc
   - --socket=x11
+  - --socket=wayland
   - --socket=pulseaudio
   - --share=network
   - --device=dri
