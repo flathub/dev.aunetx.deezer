@@ -5,7 +5,7 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node22
+  - org.freedesktop.Sdk.Extension.node24
 command: run.sh
 separate-locales: false
 tags: [proprietary]
@@ -39,7 +39,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - env XDG_CURRENT_DESKTOP=Unity zypak-wrapper /app/main/deezer-desktop "$@"
+          - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
         url: https://github.com/aunetx/deezer-linux/releases/download/v7.1.320/deezer-desktop-7.1.320-x64.tar.xz
         sha256: a828bb622da984cb4de085a8f1e47448521ef744e93a4da3a892a3dd445278d4
