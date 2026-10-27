@@ -17,8 +17,6 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --device=dri
-  # Allow other instances to see lockfiles
-  - --env=TMPDIR=/var/tmp
   # DBus permissions
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.PowerManagement
@@ -39,10 +37,13 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
+          # GNOME loads the tray icon from a file Chromium writes to TMPDIR;
+          # /var/tmp is private to the sandbox, so use the path shared with the host
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v7.1.330/deezer-desktop-7.1.330-x64.tar.xz
-        sha256: 0d9e418cd2584b429eec281cd310a3a236d45a931f391e6528e33237880e8480
+        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10/deezer-desktop-8.0.10-x64.tar.xz
+        sha256: 17a9ed464d41cd18372d54f0e1c63be7767cb9d8a97add236f9237accacad199
         only-arches: [x86_64]
         dest: archive
         x-checker-data:
@@ -53,8 +54,8 @@ modules:
           url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-x64.tar.xz")
             | .browser_download_url
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v7.1.330/deezer-desktop-7.1.330-arm64.tar.xz
-        sha256: a0a0f01028dab55fdd4ff72718de9293a4532150e2288f11d00018991bd5966a
+        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10/deezer-desktop-8.0.10-arm64.tar.xz
+        sha256: afd0159c59bafd21ff2ee1a6b67e4dd7c563b61bcd839bb51a133874bde91c35
         only-arches: [aarch64]
         dest: archive
         x-checker-data:
