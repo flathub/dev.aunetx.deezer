@@ -17,8 +17,6 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --device=dri
-  # Allow other instances to see lockfiles
-  - --env=TMPDIR=/var/tmp
   # DBus permissions
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.PowerManagement
@@ -39,6 +37,9 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
+          # GNOME loads the tray icon from a file Chromium writes to TMPDIR;
+          # /var/tmp is private to the sandbox, so use the path shared with the host
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
         url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10/deezer-desktop-8.0.10-x64.tar.xz
