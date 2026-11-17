@@ -42,8 +42,8 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper /app/main/deezer-desktop "$@"
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10/deezer-desktop-8.0.10-x64.tar.xz
-        sha256: 17a9ed464d41cd18372d54f0e1c63be7767cb9d8a97add236f9237accacad199
+        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10-1/deezer-desktop-8.0.10-x64.tar.xz
+        sha256: 5f5d37031fe8307e2c93ebde02a236454d10ad7ab60a9d1c2242ebee8e146d0b
         only-arches: [x86_64]
         dest: archive
         x-checker-data:
@@ -54,8 +54,8 @@ modules:
           url-query: .assets[] | select(.name=="deezer-desktop-" + $version + "-x64.tar.xz")
             | .browser_download_url
       - type: archive
-        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10/deezer-desktop-8.0.10-arm64.tar.xz
-        sha256: afd0159c59bafd21ff2ee1a6b67e4dd7c563b61bcd839bb51a133874bde91c35
+        url: https://github.com/aunetx/deezer-linux/releases/download/v8.0.10-1/deezer-desktop-8.0.10-arm64.tar.xz
+        sha256: 49a109bdabcae0fbadc4981fb5e25270b7ba483c92fc035775315c6a3ad10a12
         only-arches: [aarch64]
         dest: archive
         x-checker-data:
